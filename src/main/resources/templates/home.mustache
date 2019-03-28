@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a listing</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav id="nav" class="navbar navbar-expand-lg sticky-top">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="list" class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <h3><a class="nav-link" href="/admin">Admin<span class="sr-only">(current)</span></a></h3>
+                </li>
+
+                <li class="nav-item">
+                    <h3><a class="nav-link" href="/jobPost">Post Job<span class="sr-only">(current)</span></a></h3>
+                </li>
+
+            </div>
+        </ul>
+    </div>
+</nav>
+<div class="container-lg">
+    <div class="col-12 row">
+
+        <a class="my-5 mx-auto" href="#"><img id="image" src="https://basecampcodingacademy.org/images/header-logo.png" ></a>
+
+    </div>
+</div>
+
+<div id="info">
+    <div class="container-md">
+        <div id="Card" class="border border-dark rounded">
+            <h3 id="title">List of job listings</h3>
+
+            <div class="d-flex flex-nowrap">
+                <input class="input-group order-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle order-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort By
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a href="/2" class="dropdown-item" type="button">Position</a>
+                        <a href="/3" class="dropdown-item" type="button">State</a>
+                    </div>
+                </div>
+            </div>
+                <div id="myUL">
+
+                    {{#employers}}
+                            <div id="employers" class="col-11 pb-5 p-2 border border-dark rounded ml-3 mt-3 mb-3">
+                                <div class="d-flex">
+                                    <img src="{{logo}}" alt="Image not found" width="66" height="66px">
+
+
+                                    <a class="ml-3" href="/{{id}}/apply">
+
+                                        <h1 id="name">{{companyName}}</h1>
+                                        <h1 id="position">{{position}}</h1>
+                                        <div id="location" class="d-flex">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <h1 class="ml-1">{{city}},</h1>
+                                            <h1>{{state}},</h1>
+                                            <h1>{{country}}</h1>
+                                        </div>
+                                    </a>
+
+
+                                </div>
+                                <a href="{{id}}/apply" class="btn">Apply</a>
+
+
+                            </div>
+                    {{/employers}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/javascript.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

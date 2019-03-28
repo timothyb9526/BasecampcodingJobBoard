@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a listing</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/detail.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav id="nav" class="navbar navbar-expand-lg sticky-top">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="list" class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <h3><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></h3>
+                </li>
+
+                <li class="nav-item">
+                    <h3><a class="nav-link" href="/admin">Admin<span class="sr-only">(current)</span></a></h3>
+                </li>
+
+            </div>
+        </ul>
+    </div>
+</nav>
+<div class="container-lg">
+    <div class="col-12 row">
+
+        <a class="my-5 mx-auto" href="#"><img id="image" src="https://basecampcodingacademy.org/images/header-logo.png" ></a>
+
+    </div>
+</div>
+
+<div id="admin" class="container border border-dark rounded">
+
+    {{^comments}}
+
+        <p id="empty">No Comments</p>
+
+    {{/comments}}
+    {{#comments}}
+
+        <a id="button" href="/{{id}}/comments/delete" class="btn">Delete Listing</a>
+        <h1>{{name}}</h1>
+        <p>Status: {{status}}</p>
+        <p>Posted on: {{date}}</p>
+
+        <div id="comments">
+            <h3>Comment</h3>
+            <p>{{comment}}</p>
+        </div>
+
+
+    {{/comments}}
+</div>
+</body>
+<!--<script src="/javascript.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

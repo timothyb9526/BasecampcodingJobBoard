@@ -1,0 +1,130 @@
+#nav {
+    background-color: #3b1b0C;
+    color: #999898;
+}
+#image {
+    vertical-align: middle;
+}
+.container-lg {
+    background-image: url("https://basecampcodingacademy.org/images/header-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.nav-link {
+    color: #999898;
+}
+#myInput{
+    width: 100%;
+}
+#info{
+    width: 40%;
+    margin-left: 30rem;
+}
+
+#info #job {
+
+    font-size: 5rem;
+
+}
+
+#Card{
+    margin: 1rem 0rem 0rem 0rem;
+    Padding: 1rem 3rem 2rem 3rem;
+    background-color: white;
+}
+
+
+#button:hover {
+    color: white;
+    background-color: #75787a;
+    transition: all .1s ease-in;
+}
+
+
+#name {
+
+    color: black;
+
+}
+
+#position {
+
+    color: black;
+    font-size: 1.3rem;
+
+}
+
+#location {
+
+    color: silver;
+
+}
+
+#location h1 {
+
+    font-size: 1rem;
+
+}
+
+
+#employers *{
+
+    text-decoration: none;
+}
+
+#employers {
+
+    width: 100%;
+}
+
+@media only screen and (max-width: 880.5px) {
+
+
+    body{
+        width: 100%;
+        padding: 0px;
+    }
+
+    #image {
+
+        width: 95%;
+        margin-left: 1.5rem;
+
+    }
+
+    #info {
+        font-size: .8rem;
+        width: 100%;
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 0rem;
+    }
+    #nav *{
+        font-size: 1rem;
+        margin: 0rem;
+
+    }
+
+    #employers {
+
+        width: 100%;
+
+    }
+
+    #employers *{
+        font-size: 1rem;
+
+    }
+
+    #Card {
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    #myUL {
+
+        padding-left: 0rem;
+
+    }
+
+}

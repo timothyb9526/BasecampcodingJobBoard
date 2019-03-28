@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a listing</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/detail.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav id="nav" class="navbar navbar-expand-lg sticky-top">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="list" class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <h3><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></h3>
+                </li>
+
+                <li class="nav-item">
+                    <h3><a class="nav-link" href="/admin">Admin</a></h3>
+                </li>
+
+
+            </div>
+        </ul>
+    </div>
+</nav>
+<div class="container-lg">
+    <div class="col-12 row">
+
+        <a class="my-5 mx-auto" href="#"><img id="image" src="https://basecampcodingacademy.org/images/header-logo.png" ></a>
+
+    </div>
+</div>
+
+<div id="admin" class="container border border-dark rounded">
+
+
+    {{#employer}}
+
+        <div class="flex pb-3">
+            <a id="button" href="/{{id}}/comments" class="btn">View Comments</a>
+
+            <button id="button" data-toggle="modal" data-target="#myModal" class="btn">Make a comment</button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="/{{id}}/comments" method="POST">
+                            <div class="modal-body">
+                                <input name="status" type="text" value="Applicant" hidden>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="name" placeholder="name" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Comment:</label>
+                                    <input type="text" name="comment" placeholder="Please leave a comment" class="form-control" id="comment">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <img src="{{logo}}" alt="#" width="400px" height="300px">
+
+        <h1>{{name}}</h1>
+        <h3>{{position}}</h3>
+        <p>{{companyName}} * <span>{{city}},{{state}},{{country}}</span></p>
+        <p>Posted on: {{date}}</p>
+
+        <div id="textArea">
+            <h3 id="description">Description</h3>
+            <p id="desc">{{description}}</p>
+        </div>
+        <div id="textArea">
+            <h3 id="benefits">Benefits</h3>
+            <p id="bF">{{benefits}}</p>
+        </div>
+        <div id="textArea">
+            <h3 id="responsibilities">responsibilities</h3>
+            <p id="reqs">{{responsibilities}}</p>
+            <ul id="list">
+
+            </ul>
+        </div>
+        <div id="textArea">
+            <h3 id="Qualifications">Qualifications</h3>
+            <p id="qual">{{qualifications}}</p>
+        </div>
+        <div id="textArea">
+            <h3 id="PreferredQualifications">Preferred Qualifications</h3>
+            <p id="pQual">{{preferredQualifications}}</ppQual>
+        </div>
+
+
+    {{/employer}}
+</div>
+</body>
+
+<script src="/js/detail.js"></script>
+
+<!--<script src="/javascript.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

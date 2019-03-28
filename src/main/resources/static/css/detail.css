@@ -1,0 +1,104 @@
+
+    #textArea {
+        border: 3px solid black;
+        position: relative;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #textArea h3 {
+        position: relative;
+        background-color: white;
+        left: 2rem;
+        top: -2rem;
+    }
+
+
+    #comments {
+        border: 3px solid black;
+        position: relative;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #comments h3 {
+        width: 12%;
+        position: relative;
+        background-color: white;
+        left: 2rem;
+        top: -2rem;
+    }
+    #textArea #description {
+        width: 15%;
+    }
+    #textArea #benefits {
+        width: 15%;
+    }
+    #textArea #responsibilities {
+        width: 20%;
+    }
+    #textArea #Qualifications {
+        width: 20%;
+    }
+    #textArea #PreferredQualifications {
+        width: 30%;
+    }
+
+    #empty {
+
+        font-size: 3rem;
+        text-align: center;
+
+    }
+
+    @media only screen and (max-width: 880.5px) {
+
+
+        #comments h3 {
+            width: 50%;
+        }
+
+        #empty {
+
+            font-size: 3rem;
+            text-align: center;
+
+        }
+
+        #admin h1{
+
+            font-size: 2rem;
+
+        }
+
+        img {
+
+            width: 100%;
+
+        }
+
+         #textArea #description {
+                width: 60%;
+        }
+        #textArea #benefits {
+            width: 50%;
+        }
+        #textArea #responsibilities {
+            width: 80%;
+        }
+        #textArea #Qualifications {
+            width: 70%;
+        }
+        #textArea #PreferredQualifications {
+            width: 50%;
+        }
+
+        #textArea h3 {
+            position: relative;
+            left: 0rem;
+            top: -2rem;
+        }
+
+    }
